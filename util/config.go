@@ -21,10 +21,10 @@ func LoadConfig(path string) (config Config, err error) {
 	viper.SetConfigType("env") // json, xml, yaml, toml, etc.
 
 	viper.AutomaticEnv() // read environment variables that match
-	
+
 	// Set defaults for testing/CI environments
 	setDefaultValues()
-	
+
 	err = viper.ReadInConfig()
 	if err != nil {
 		// If config file is not found, use environment variables and defaults

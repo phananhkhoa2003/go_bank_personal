@@ -18,12 +18,12 @@ func TestMain(m *testing.M) {
 	if err != nil {
 		log.Fatal("cannot load config: ", err)
 	}
-	
+
 	// Override with test database if available from environment
 	if testDBSource := os.Getenv("TEST_DB_SOURCE"); testDBSource != "" {
 		config.DBSource = testDBSource
 	}
-	
+
 	connPool, err := pgxpool.New(context.Background(), config.DBSource)
 
 	if err != nil {
