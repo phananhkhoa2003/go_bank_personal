@@ -39,6 +39,8 @@ benchmark_results/
 *benchmark_results*.txt
 *benchmark_results*.csv
 *benchmark_results*.md
+*benchmark*.txt
+*benchmark*.csv
 cpu.prof
 mem.prof
 *.prof
@@ -49,6 +51,7 @@ loadtest_results*.csv
 loadtest_results*.json
 loadtest/results/
 loadtest_mock/results/
+*loadtest_results*
 
 # Make command artifacts
 *.log
